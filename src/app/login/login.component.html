@@ -1,0 +1,24 @@
+<h2>Login Form</h2>
+
+<form (submit)="validateLogin($event,user)" #user="ngForm">
+  <div class="imgcontainer">
+    <img src="../../../assets/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+  <div class="alert alert-danger" style="text-align: center" *ngIf="errorMsg.length>0">
+        <strong>{{errorMsg}}</strong>
+      </div>
+  
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" [(ngModel)]="user.uname" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" [(ngModel)]="user.pass" name="pass" required>
+        
+    <button type="submit">Login</button>
+   
+  </div>
+
+ 
+</form>
+
